@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+nav{
+  background: linear-gradient(90deg, rgba(42,117,187,1) 50%, rgba(255,203,5,1) 100%);
+  text-align: center;
+}
+
+ul{
+  padding: 0;
+}
+
+#filterSearch{
+  margin-top: 1rem;
+  padding: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  display: flex;
+  gap: .25rem;
+}
+
+.pokemonWrapper{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemonCard{
+  background: linear-gradient(90deg, rgba(42,117,187,1) 50%, rgba(255,203,5,1) 100%);
+  width: 28%;
+  height: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  border-radius: .75rem;
+}
+
+.pokemonDescription{
+  background-color: #ffffff79;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: .75rem 1.75rem;
+  text-align: left;
+  padding: .75rem;
+  border-radius: .5rem;
+}
+
+.pokemonTypes{
+  display: flex;
+}
+
+.pokemonType{
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 0 0.75rem 1rem 0;
+  border-radius: .25rem;
+}
+
+img{
+  height: 10rem;
+  width: 10rem;
+}
+
+.grass{
+  background-color: #0ead0eb6;
+}
+
+.poison{
+  background-color: #8246b9;
+}
+
+.normal{
+  background-color: #818181;
+}
+
+.fire{
+  background-color: #ff7300;
+}
+
+.water{
+  background-color: #3361c5;
+}
+
+.eletric{
+  background-color: #ffff00;
+}
+
+.ice{
+  background-color: #0ab6b6;
+}
+
+.fighting{
+  background-color: #bd2e4b;
+}
+
+.ground{
+  background-color: #ac581c;
+}
+
+.flying{
+  background-color: #a9a9a9;
+}
+
+.psychic{
+  background-color: #ff1493;
+}
+
+.bug{
+  background-color: #0a690ab6;
+}
+
+.rock{
+  background-color: #997f36
+}
+
+.ghost{
+  background-color: #800080;
+}
+
+.dark{
+  background-color: #8e8c94;
+}
+
+.dragon{
+  background-color: #3c7777;
+}
+
+.steel{
+  background-color: #617a7a;
+}
+
+.fairy{
+  background-color: #ff69b4;
+}
