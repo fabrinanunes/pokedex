@@ -6,13 +6,12 @@
 Pokémon catalogue with Pokémon names, types & status.
 
 ## 🔨 Features
-[x] View basic details of each Pokémon
-
-[] Order Pokémons by type or ID
-
-[] Search Pokémon by name
-
-[] Pokémon status
+```
+[X] View basic details of each Pokémon
+[ ] Order Pokémons by type or ID
+[ ] Search Pokémon by name
+[ ] Pokémon status
+```
 
 ## 🚀 Build with
 
