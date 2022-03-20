@@ -14,16 +14,27 @@ h1 {
   font-family: 'Bebas Neue', cursive;
   font-size: 2rem;
   margin: 0;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-nav{
-  background: linear-gradient(90deg, rgba(42,117,187,1) 50%, rgba(255,203,5,1) 100%);
+p, span{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem;
+  margin-top: .8rem;
+}
+
+#navbar{
+  background: linear-gradient(90deg, rgb(42, 117, 187) 50%, rgba(255,203,5,1) 100%);
   text-align: center;
+}
+
+#pokemonLogo{
+  width: 20rem;
 }
 
 ul{
   padding: 0;
+  list-style: none;
 }
 
 #filterSearch{
@@ -48,7 +59,7 @@ label{
 }
 
 .pokemonCard{
-  background: linear-gradient(90deg, rgba(42,117,187,1) 50%, rgba(255,203,5,1) 100%);
+  background: linear-gradient(to bottom right, rgba(42, 117, 187, 0.726) 10%, rgba(255, 205, 5, 0.822) 100%);
   width: 28%;
   height: 20rem;
   margin: 0 auto;
@@ -58,31 +69,28 @@ label{
   border-radius: .75rem;
 }
 
-.pokemonDescription{
-  background-color: #ffffff79;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  margin: .75rem 1.75rem;
+#pokemonId{
   text-align: left;
-  padding: .75rem;
-  border-radius: .5rem;
+  font-size: 1.5rem;
+  margin: 0 .5rem;
+
+}
+
+img{
+  height: 8rem;
+  width: 8rem;
 }
 
 .pokemonTypes{
   display: flex;
+  justify-content: center;
 }
 
 .pokemonType{
-  justify-content: center;
   align-items: center;
-  padding: 0.25rem;
-  margin: 0 0.75rem 1rem 0;
-  border-radius: .25rem;
-}
-
-img{
-  height: 10rem;
-  width: 10rem;
+  padding: 0.5rem 1rem;
+  margin: .75rem;
+  border-radius: .75rem;
 }
 
 .grass{

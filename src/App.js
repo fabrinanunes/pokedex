@@ -4,13 +4,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import Pokecard from './components/Pokecard.jsx';
+import PokeWrapper from './components/PokeWrapper.jsx';
 import './App.css';
 
 function App() {
   return (
     <>
-      <nav>
+      <nav id="navbar">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
           alt="Pokemon Logo"
@@ -40,7 +40,7 @@ function App() {
           </select>
         </label>
       </div>
-      <Pokecard />
+      <PokeWrapper />
     </>
   );
 }

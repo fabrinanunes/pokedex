@@ -1,65 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+/* eslint-disable react/function-component-definition */
+/* eslint-disable prettier/prettier */
+/* eslint-disable array-callback-return */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-array-index-key */
 
-function Pokecard() {
-  const [pokemons, setPokemons] = useState([]);
-  const [loadMore, setLoadMore] = useState(
-    'https://pokeapi.co/api/v2/pokemon/?limit=20'
-  );
+import React from 'react';
+import PokeData from './PokemonData';
 
-  async function getPokemons() {
-    const res = await fetch(loadMore);
-    const data = await res.json();
+const PokeCard = ({pokemon}) => {
 
-    function getPokemonData(result) {
-      result.forEach(async (pokemon) => {
-        const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-        );
-        const pokemonData = await response.json();
-
-        setPokemons((currentList) => [...currentList, pokemonData]);
-      });
-    }
-    getPokemonData(data.results);
-  }
-
-  useEffect(() => {
-    getPokemons();
-  }, []);
-
-  return (
-    <>
-      <section className="pokemonWrapper">
-        {pokemons.map((pokemon) => (
-          <li key={pokemon.id} className="pokemonCard">
-            <img
-              src={pokemon.sprites.other.dream_world.front_default}
-              alt={pokemon.name}
-            />
-            <div className="pokemonDescription">
-              <span>#00{pokemon.id}</span>
-              <h1>{pokemon.name}</h1>
-              <div className="pokemonTypes">
-                {pokemon.types.map((type) => (
-                  <span
-                    key={type.slot}
-                    className="pokemonType"
-                    data-id={type.type.name}
-                  >
-                    <span>{type.type.name}</span>
-                  </span>
-                ))}
-              </div>
-            </div>
-          </li>
-        ))}
-      </section>
-      <footer>
-        <span>Rodapé</span>
-      </footer>
-    </>
-  );
+   return(
+      <>
+         {
+            pokemon.map((value, index) => 
+            <PokeData key={index} thisPokemon={value} />
+            )
+         }
+      </>
+   )
 }
 
-export default Pokecard;
+export default PokeCard;
