@@ -29,14 +29,9 @@ function Pokecard() {
   }, []);
 
   return (
-    <>
-      <section className="pokemonWrapper">
-        <PokeCard pokemon={pokemon} />
-      </section>
-      <footer>
-        <span>Rodapé</span>
-      </footer>
-    </>
+    <section className="pokemonWrapper">
+      <PokeCard pokemon={pokemon} />
+    </section>
   );
 }
 

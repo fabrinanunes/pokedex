@@ -4,7 +4,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import PokeWrapper from './components/PokeWrapper.jsx';
+import PokeWrapper from './components/PokeWrapper';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -20,7 +21,12 @@ function App() {
       <div id="filterSearch">
         <label htmlFor="pokemonName">
           Name
-          <input type="search" id="pokemonName" name="pokemonName" />
+          <input
+            type="search"
+            id="pokemonName"
+            name="pokemonName"
+            style={{ paddingLeft: '.5rem' }}
+          />
         </label>
         <label htmlFor="pokemonType">
           Type
@@ -41,6 +47,7 @@ function App() {
         </label>
       </div>
       <PokeWrapper />
+      <Footer />
     </>
   );
 }

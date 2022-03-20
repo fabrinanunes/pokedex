@@ -35,13 +35,13 @@ function PokeData({ thisPokemon }) {
   return (
     <div className="pokemonCard">
       <p id="pokemonId">#{onePokemon.id}</p>
-      <img
+      {/* <img
         src={onePokemon.sprites.other.dream_world.front_default}
         alt={onePokemon.name}
-      />
+      /> */}
       <h1>{onePokemon.name}</h1>
       <div className="pokemonTypes">
-        {onePokemon.types.map((type) => (
+        {/* {onePokemon.types.map((type) => (
           <span
             key={type.slot}
             className={`pokemonType ${type.type.name}`}
@@ -49,7 +49,7 @@ function PokeData({ thisPokemon }) {
           >
             {type.type.name}
           </span>
-        ))}
+        ))} */}
       </div>
       <span>{onePokemon.weight} kg</span>
     </div>
