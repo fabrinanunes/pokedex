@@ -11,13 +11,7 @@ import PokeData from './PokemonData';
 const PokeCard = ({pokemon}) => {
 
    return(
-      <>
-         {
-            pokemon.map((value, index) => 
-            <PokeData key={index} thisPokemon={value} />
-            )
-         }
-      </>
+      <PokeData thisPokemon={pokemon} />
    )
 }
 

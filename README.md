@@ -8,8 +8,8 @@ Pokémon catalogue with Pokémon names, types & status.
 ## 🔨 Features
 ```
 [X] View basic details of each Pokémon
-[ ] Order Pokémons by type or ID
-[ ] Search Pokémon by name
+[X] Order Pokémons by type or ID
+[X] Search Pokémon by name
 [ ] Pokémon status
 ```
 

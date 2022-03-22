@@ -3,12 +3,23 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PokeWrapper from './components/PokeWrapper';
 import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
+import { getAllPokemon } from './functions/getPokemons';
 import './App.css';
 
 function App() {
+  const [pokemon, setPokemon] = useState([]);
+  const [newPokemon, setNewPokemon] = useState([]);
+
+  useEffect(async () => {
+    const listPokemon = await getAllPokemon();
+    setPokemon(listPokemon);
+    setNewPokemon(listPokemon);
+  }, []);
+
   return (
     <>
       <nav id="navbar">
@@ -18,35 +29,12 @@ function App() {
           id="pokemonLogo"
         />
       </nav>
-      <div id="filterSearch">
-        <label htmlFor="pokemonName">
-          Name
-          <input
-            type="search"
-            id="pokemonName"
-            name="pokemonName"
-            style={{ paddingLeft: '.5rem' }}
-          />
-        </label>
-        <label htmlFor="pokemonType">
-          Type
-          <select id="pokemonType" name="pokemonType">
-            <option value="normal">Normal</option>
-            <option value="fighting">Fighting</option>
-            <option value="flying">Flying</option>
-            <option value="poison">Poison</option>
-            <option value="ground">Ground</option>
-          </select>
-        </label>
-        <label htmlFor="sortBy">
-          Sort
-          <select id="sortBy" name="sortBy">
-            <option value="id">ID</option>
-            <option value="name">Name</option>
-          </select>
-        </label>
-      </div>
-      <PokeWrapper />
+      <SearchBar
+        setPokemon={setNewPokemon}
+        originalPokemon={pokemon}
+        currentPokemon={newPokemon}
+      />
+      <PokeWrapper pokemon={newPokemon} />
       <Footer />
     </>
   );

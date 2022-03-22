@@ -1,47 +1,26 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable prefer-const */
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-function PokeData({ thisPokemon }) {
-  const [onePokemon, setOnePokemon] = useState({});
-
-  const getPokemon = (url) => {
-    axios
-      .get(url)
-      .then((res) => {
-        console.log(res.data);
-        setOnePokemon(res.data);
-      })
-      .catch((err) => {
-        //   console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    getPokemon(thisPokemon.url);
-  }, []);
-
+function PokeData({ thisPokemon: _thisPokemon }) {
+  const thisPokemon = { ..._thisPokemon };
   // transform pokemon ID to 3 digits
-  if (onePokemon.id < 100) {
-    onePokemon.id = String(onePokemon.id).padStart(3, '0');
+  if (thisPokemon.id < 100) {
+    thisPokemon.id = String(thisPokemon.id).padStart(3, '0');
   }
 
-  //   onePokemon.name =
-  //     onePokemon.name[0].toUpperCase() + onePokemon.name.substr(1);
+  //   thisPokemon.name =
+  //     thisPokemon.name[0].toUpperCase() + thisPokemon.name.substr(1);
 
   return (
     <div className="pokemonCard">
-      <p id="pokemonId">#{onePokemon.id}</p>
-      {/* <img
-        src={onePokemon.sprites.other.dream_world.front_default}
-        alt={onePokemon.name}
-      /> */}
-      <h1>{onePokemon.name}</h1>
+      <p id="pokemonId">#{thisPokemon.id}</p>
+      <img
+        src={thisPokemon.sprites.other.dream_world.front_default}
+        alt={thisPokemon.name}
+      />
+      <h1>{thisPokemon.name}</h1>
       <div className="pokemonTypes">
-        {/* {onePokemon.types.map((type) => (
+        {thisPokemon.types.map((type) => (
           <span
             key={type.slot}
             className={`pokemonType ${type.type.name}`}
@@ -49,9 +28,9 @@ function PokeData({ thisPokemon }) {
           >
             {type.type.name}
           </span>
-        ))} */}
+        ))}
       </div>
-      <span>{onePokemon.weight} kg</span>
+      <span>{thisPokemon.weight / 10} kg</span>
     </div>
   );
 }
