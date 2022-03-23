@@ -9,19 +9,23 @@ import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import { getAllPokemon } from './functions/getPokemons';
 import './App.css';
+import Loading from './components/Loading';
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
   const [newPokemon, setNewPokemon] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
     const listPokemon = await getAllPokemon();
     setPokemon(listPokemon);
     setNewPokemon(listPokemon);
+    setLoading(false);
   }, []);
 
   return (
     <>
+      <Loading visible={loading} />
       <nav id="navbar">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"

@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-shadow */
@@ -36,8 +37,9 @@ function SearchBar({ setPokemon, originalPokemon, currentPokemon }) {
       return;
     }
 
-    const filteredPokemon = originalPokemon.filter(
-      (pokemon) => pokemon.name.indexOf(pokemonName.toLowerCase()) !== -1
+    const regexPokemonName = new RegExp(eval(`/^${pokemonName}/`), 'i');
+    const filteredPokemon = originalPokemon.filter((pokemon) =>
+      regexPokemonName.test(pokemon.name)
     );
     setPokemon(filteredPokemon);
   };

@@ -12,7 +12,7 @@ function PokeData({ thisPokemon: _thisPokemon }) {
   //     thisPokemon.name[0].toUpperCase() + thisPokemon.name.substr(1);
 
   return (
-    <div className="pokemonCard">
+    <>
       <p id="pokemonId">#{thisPokemon.id}</p>
       <img
         src={thisPokemon.sprites.other.dream_world.front_default}
@@ -31,7 +31,7 @@ function PokeData({ thisPokemon: _thisPokemon }) {
         ))}
       </div>
       <span>{thisPokemon.weight / 10} kg</span>
-    </div>
+    </>
   );
 }
 

@@ -37,6 +37,48 @@ input:focus{
   width: 15rem;
 }
 
+.loading{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d1d1;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility .8s linear, opacity .8s linear;
+}
+
+.loading.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loading div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: pokeballSpin;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  animation-direction: normal;
+}
+
+.loading.hidden div{
+  display: none;
+}
+
+.loading div img{
+  width: 150%;
+  height: 150%;
+}
+
 #navbar{
   background: linear-gradient(90deg, rgb(42, 117, 187) 50%, rgba(255,203,5,1) 100%);
   text-align: center;
@@ -73,7 +115,7 @@ label{
 }
 
 .pokemonCard{
-  background: linear-gradient(to bottom right, rgba(42, 117, 187, 0.726) 10%, rgba(255, 205, 5, 0.822) 100%);
+  /* background: linear-gradient(to bottom right, rgba(42, 117, 187, 0.726) 10%, rgba(255, 205, 5, 0.822) 100%); */
   width: 28%;
   height: 20rem;
   margin: 0 auto;
@@ -113,6 +155,15 @@ img{
   }
 }
 
+@keyframes pokeballSpin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 .grass{
   background-color: #0ead0eb6;
 }
@@ -122,7 +173,7 @@ img{
 }
 
 .normal{
-  background-color: #818181;
+  background-color: #747474;
 }
 
 .fire{
@@ -134,7 +185,7 @@ img{
 }
 
 .electric{
-  background-color: #ffff00;
+  background-color: #e6e636;
 }
 
 .ice{
@@ -162,7 +213,7 @@ img{
 }
 
 .rock{
-  background-color: #997f36
+  background-color: #746029
 }
 
 .ghost{
@@ -182,5 +233,44 @@ img{
 }
 
 .fairy{
-  background-color: #ff69b4;
+  background-color: #e4519a;
 }
+
+:root{
+  --grass: #42aa42b6;
+  
+  --poison: #a278c9;
+  
+  --normal: #8f8f8f;
+  
+  --fire: #f89747;
+  
+  --water: #748fca;
+  
+  --electric: #f5f597;
+  
+  --ice: #4cb9b9;
+  
+  --fighting: #c96a7d;
+  
+  --ground: #c28e6a;
+  
+  --flying: #cacaca;
+  
+  --psychic: #e673b0;
+  
+  --bug: #8cc25a;
+  
+  --rock: #998652;
+  
+  --ghost: #853e85;
+  
+  --dark: #bebbc8;
+  
+  --dragon: #497979;
+  
+  --steel: #879696;
+  
+  --fairy: #f57eb9;
+}
+
