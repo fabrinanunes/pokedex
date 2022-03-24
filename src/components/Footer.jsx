@@ -33,10 +33,10 @@ function Footer() {
       <Box
         component="footer"
         sx={{
-          py: 3,
+          py: 2.5,
           px: 2,
           mt: 'auto',
-          backgroundColor: '#3e7fbd',
+          backgroundColor: '#3e80bdea',
           textAlign: 'center',
         }}
       >

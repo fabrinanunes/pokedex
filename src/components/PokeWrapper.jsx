@@ -5,15 +5,25 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PokeCard from './PokeCard';
 
 function Pokecard({ pokemon }) {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <section className="pokemonWrapper">
-      {pokemon.map((item) => (
-        <PokeCard pokemon={item} />
-      ))}
-    </section>
+    <>
+      <section className="pokemonWrapper">
+        {pokemon.map((item) => (
+          <PokeCard pokemon={item} />
+        ))}
+      </section>
+      <button type="button" className="arrowToTop" onClick={handleClick}>
+        <ArrowForwardIosIcon />
+      </button>
+    </>
   );
 }
 
