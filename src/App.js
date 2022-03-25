@@ -15,6 +15,7 @@ function App() {
   const [pokemon, setPokemon] = useState([]);
   const [newPokemon, setNewPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [btnArrowToTopVisible, setBtnArrowToTopVisible] = useState(false);
 
   useEffect(async () => {
     const listPokemon = await getAllPokemon();
@@ -22,6 +23,10 @@ function App() {
     setNewPokemon(listPokemon);
     setLoading(false);
   }, []);
+
+  window.onscroll = (e) => {
+    setBtnArrowToTopVisible(scrollY >= 600);
+  };
 
   return (
     <>
@@ -38,7 +43,10 @@ function App() {
         originalPokemon={pokemon}
         currentPokemon={newPokemon}
       />
-      <PokeWrapper pokemon={newPokemon} />
+      <PokeWrapper
+        pokemon={newPokemon}
+        btnArrowToTopVisible={btnArrowToTopVisible}
+      />
       <Footer />
     </>
   );

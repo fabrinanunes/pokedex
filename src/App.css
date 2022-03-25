@@ -203,7 +203,7 @@ label{
 }
 
 .electric{
-  background-color: #e6e636;
+  background-color: #eeee0f;
 }
 
 .ice{
@@ -227,7 +227,7 @@ label{
 }
 
 .bug{
-  background-color: #50be2e;
+  background-color: #42cc18;
 }
 
 .rock{
@@ -255,7 +255,7 @@ label{
 }
 
 :root{
-  --grass: #3d833db6;
+  --grass: #327232b6;
   
   --poison: #b996da;
   
@@ -263,7 +263,7 @@ label{
   
   --fire: #fca660;
   
-  --water: #6c6dac;
+  --water: #3d73e7be;
   
   --electric: #f5f597;
   
@@ -275,9 +275,9 @@ label{
   
   --flying: #9badb6;
   
-  --psychic: #e673b0;
+  --psychic: #e280b5;
   
-  --bug: #a5d37b;
+  --bug: #a8d67e;
   
   --rock: #998652;
   
