@@ -8,7 +8,8 @@ Pokémon catalogue with Pokémon names, types & status.
 ## 🔨 Features
 ```
 [X] View basic details of each Pokémon
-[X] Order Pokémons by type or ID
+[X] Order Pokémon by name or ID
+[X] Filter Pokémon bt type
 [X] Search Pokémon by name
 [ ] Pokémon status
 ```
@@ -22,7 +23,7 @@ Pokémon catalogue with Pokémon names, types & status.
 ## 🔖 Layout
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/84260347/158292748-ba9c6475-4337-4dcb-b47c-74f77e861408.jpg" width="800px" />
+<img src="https://user-images.githubusercontent.com/84260347/159822771-ac1c9edb-527c-4e21-943e-ec87b2222698.png" width="800px" />
 </p>
 
 
