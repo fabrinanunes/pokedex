@@ -14,7 +14,7 @@ function Copyright() {
     >
       {'Copyright © '}
       <Link color="inherit" href="https://github.com/fabrinanunes">
-        <GitHubIcon sx={{ px: 0.75 }} />
+        <GitHubIcon />
         Fabrina Nunes
       </Link>
     </Typography>

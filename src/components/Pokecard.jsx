@@ -1,24 +1,59 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable prettier/prettier */
-/* eslint-disable array-callback-return */
+/* eslint-disable no-param-reassign */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/no-array-index-key */
 
 import React from 'react';
-import PokeData from './PokemonData';
+import OpenInFullIcon from '@mui/icons-material/OpenInFull';
+import PokeCardDetails from './PokeCardDetails';
 
-const PokeCard = ({pokemon}) => {
-   const firstColor = pokemon.types[0].type.name;
-   const secondColor = (pokemon.types[1] || pokemon.types[0]).type.name
+function PokeCards({ pokemon }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
 
-   return(
-      <div className="pokemonCard" style={{
-         background: `linear-gradient(to bottom right, var(--${firstColor}) 10%, var(--${secondColor}) 100%)`
-      }}>
-         <PokeData thisPokemon={pokemon} />
+  const firstColor = pokemon.types[0].type.name;
+  const secondColor = (pokemon.types[1] || pokemon.types[0]).type.name;
+
+  // transform pokemon ID to 3 digits
+  if (pokemon.id < 100) {
+    pokemon.id = String(pokemon.id).padStart(3, '0');
+  }
+
+  return (
+    <>
+      <div
+        className="pokemonCard"
+        style={{
+          background: `linear-gradient(to bottom right, var(--${firstColor}) 33%, var(--${secondColor}) 70%)`,
+        }}
+      >
+        <div className="pokemonCardHeader">
+          <span className="pokemonId">#{pokemon.id}</span>
+          <OpenInFullIcon id="openCardIcon" onClick={handleOpen} />
+        </div>
+        <img
+          src={pokemon.sprites.other.dream_world.front_default}
+          alt={pokemon.name}
+        />
+        <h1>{pokemon.name}</h1>
+        <div className="pokemonTypes">
+          {pokemon.types.map((type) => (
+            <span
+              key={type.slot}
+              className={`pokemonType ${type.type.name}`}
+              data-id={type.type.name}
+            >
+              {type.type.name}
+            </span>
+          ))}
+        </div>
+        <span>{pokemon.weight / 10} kg</span>
       </div>
-   )
+      <PokeCardDetails
+        pokemon={pokemon}
+        visibility={open}
+        setVisibility={setOpen}
+      />
+    </>
+  );
 }
-
-export default PokeCard;
+export default PokeCards;

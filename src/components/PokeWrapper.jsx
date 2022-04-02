@@ -6,7 +6,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import PokeCard from './PokeCard';
+import PokeCards from './PokeCard';
 
 function PokeWrapper({ pokemon, btnArrowToTopVisible }) {
   const handleClick = () => {
@@ -17,7 +17,7 @@ function PokeWrapper({ pokemon, btnArrowToTopVisible }) {
     <>
       <section className="pokemonWrapper">
         {pokemon.map((item) => (
-          <PokeCard pokemon={item} />
+          <PokeCards pokemon={item} key={item.id} />
         ))}
       </section>
       <button

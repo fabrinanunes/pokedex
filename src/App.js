@@ -37,6 +37,9 @@ function App() {
           alt="Pokemon Logo"
           id="pokemonLogo"
         />
+        <p>
+          by <a href="https://linkedin.com/in/fabrinanunes">Fabrina Nunes</a>
+        </p>
       </nav>
       <SearchBar
         setPokemon={setNewPokemon}
