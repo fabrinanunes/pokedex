@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable import/extensions */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/label-has-associated-control */
+
 import React, { useState, useEffect } from 'react';
 import PokeWrapper from './components/pokewrapper/PokeWrapper.jsx';
 import Footer from './components/Footer/Footer';
@@ -17,11 +18,14 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [btnArrowToTopVisible, setBtnArrowToTopVisible] = useState(false);
 
-  useEffect(async () => {
-    const listPokemon = await getAllPokemon();
-    setPokemon(listPokemon);
-    setNewPokemon(listPokemon);
-    setLoading(false);
+  useEffect(() => {
+    async function execute() {
+      const listPokemon = await getAllPokemon();
+      setPokemon(listPokemon);
+      setNewPokemon(listPokemon);
+      setLoading(false);
+    }
+    execute();
   }, []);
 
   window.onscroll = (e) => {
