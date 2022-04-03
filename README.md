@@ -1,6 +1,6 @@
 <p align='center'>
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" /></p>
-<h3 align="center"> Current Status: 🚧 building</h3>
+<h3 align="center"> Current Status: ✅ completed</h3>
 
 ## 💻 Project
 Pokémon catalogue with Pokémon names, types & status.
@@ -11,7 +11,7 @@ Pokémon catalogue with Pokémon names, types & status.
 [X] Order Pokémon by name or ID
 [X] Filter Pokémon bt type
 [X] Search Pokémon by name
-[ ] Pokémon status
+[X] Pokémon status
 ```
 
 ## 🚀 Build with
