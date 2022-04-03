@@ -11,7 +11,7 @@ Pokémon catalogue with Pokémon names, types & status.
 [X] Order Pokémon by name or ID
 [X] Filter Pokémon bt type
 [X] Search Pokémon by name
-[ ] Pokémon status
+[X] Pokémon status
 ```
 
 ## 🚀 Build with
