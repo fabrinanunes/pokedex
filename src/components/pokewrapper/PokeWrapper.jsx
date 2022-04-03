@@ -6,7 +6,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import PokeCards from './PokeCard';
+import PokeCards from '../Pokecard/PokeCard';
+import './style.css';
 
 function PokeWrapper({ pokemon, btnArrowToTopVisible }) {
   const handleClick = () => {

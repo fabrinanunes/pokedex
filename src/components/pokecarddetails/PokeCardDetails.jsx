@@ -4,6 +4,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import './style.css';
 
 function PokeCardDetails({ pokemon, visibility = false, setVisibility }) {
   const handleClose = () => setVisibility(false);

@@ -1,0 +1,50 @@
+.loading{
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #d1d1d1;
+   visibility: visible;
+   opacity: 1;
+   transition: visibility .8s linear, opacity .8s linear;
+ }
+ 
+ .loading.hidden{
+   visibility: hidden;
+   opacity: 0;
+ }
+ 
+ .loading div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation-name: pokeballSpin;
+   animation-duration: .5s;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+   animation-iteration-count: infinite;
+   animation-delay: 0ms;
+   animation-direction: normal;
+ }
+ 
+ .loading.hidden div{
+   display: none;
+ }
+ 
+ .loading div img{
+   width: 150%;
+   height: 150%;
+ }
+
+ @keyframes pokeballSpin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

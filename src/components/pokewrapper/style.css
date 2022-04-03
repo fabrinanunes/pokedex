@@ -1,0 +1,21 @@
+.arrowToTop{
+   background-color: rgb(42, 117, 187);
+   transform: rotate(-90deg);
+   position: fixed;
+   right: 1.6rem;
+   bottom: 1.6rem;
+   padding: 0.8rem;
+   clip-path: circle();
+   border: none;
+ }
+
+ .pokemonWrapper{
+   max-width: 80%;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .arrowToTop:hover{
+   transform: scale(1.1) rotate(-90deg);
+ }

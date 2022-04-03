@@ -4,7 +4,9 @@
 
 import React from 'react';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import PokeCardDetails from './PokeCardDetails';
+import PokeCardDetails from '../pokecarddetails/PokeCardDetails';
+
+import './style.css';
 
 function PokeCards({ pokemon }) {
   const [open, setOpen] = React.useState(false);

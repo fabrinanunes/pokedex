@@ -4,12 +4,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
-import PokeWrapper from './components/PokeWrapper';
-import Footer from './components/Footer';
-import SearchBar from './components/SearchBar';
+import PokeWrapper from './components/pokewrapper/PokeWrapper.jsx';
+import Footer from './components/Footer/Footer';
+import SearchBar from './components/searchbar/SearchBar';
 import { getAllPokemon } from './functions/getPokemons';
 import './App.css';
-import Loading from './components/Loading';
+import Loading from './components/Loading/Loading';
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -38,7 +38,14 @@ function App() {
           id="pokemonLogo"
         />
         <p>
-          by <a href="https://linkedin.com/in/fabrinanunes">Fabrina Nunes</a>
+          by{' '}
+          <a
+            href="https://linkedin.com/in/fabrinanunes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Fabrina Nunes
+          </a>
         </p>
       </nav>
       <SearchBar

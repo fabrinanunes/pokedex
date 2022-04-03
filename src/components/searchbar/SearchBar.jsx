@@ -4,6 +4,7 @@
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './style.css';
 
 function SearchBar({ setPokemon, originalPokemon, currentPokemon }) {
   const [pokemonType, setPokemonTypes] = useState([]);

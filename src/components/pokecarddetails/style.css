@@ -1,0 +1,65 @@
+.pokemonCardInfo{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 1rem 2rem;
+   width: 52rem;
+   height: 38rem;
+   border: transparent;
+   border-radius: 2rem;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .pokemonCardInfo h1{
+   font-size: 3rem;
+   padding: 0;
+ }
+ 
+ .pokemonCardInfo img{
+   width: 10rem;
+   height: 10rem;
+   animation-name: pokemon;
+   animation-iteration-count: infinite;animation-duration: 3.5s;
+ }
+ 
+ .pokemonData{
+   display: grid;
+   justify-content: center;
+   margin-top: .8rem;
+   padding: .5rem 0;
+   background-color: #ffffff54;
+    border-radius: 1rem;
+ }
+ 
+ .abilities{
+   padding: 0 2rem;
+ }
+ 
+ .abilitiesInfo{
+   margin-bottom: .5rem;
+ }
+ 
+ .statsData{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+ }
+ 
+ .stats{
+   padding: 0 2rem;
+ }
+
+ @keyframes pokemon{
+  0%{
+      transform: translate(0, -10px);
+  }
+
+  50%{
+      transform: translate(0, 10px);
+  }
+
+  100%{
+      transform: translate(0, -10px);
+  }
+}
